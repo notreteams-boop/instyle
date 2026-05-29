@@ -7,7 +7,7 @@
 <meta name="description" content="Premium skaistumkopšanas salons Rīgā. Airtouch, balayage, izgaismošana, sirmuma maskēšana. Latgales iela 222.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -82,7 +82,9 @@ nav ul a:hover{color:var(--text)}
 
 .hero-badge{position:relative;z-index:2;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border2);border-radius:20px;padding:6px 16px;margin-bottom:28px;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text2);width:fit-content}
 .hero-badge::before{content:'●';font-size:6px;color:var(--accent)}
-.hero h1{position:relative;z-index:2;font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5.5vw,70px);font-weight:400;line-height:1.1;max-width:620px;margin-bottom:20px}
+.hero h1{position:relative;z-index:2;font-family:var(--hero-font,'Playfair Display',serif);font-size:clamp(40px,5.5vw,70px);font-weight:400;line-height:1.1;max-width:620px;margin-bottom:20px}
+html[lang="lv"] .hero h1{font-family:'Playfair Display',serif}
+html[lang="ru"] .hero h1, html[lang="en"] .hero h1{font-family:'Cormorant Garamond',serif}
 .hero h1 em{font-style:italic;background:linear-gradient(135deg,var(--accent),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero>p{position:relative;z-index:2;color:var(--text2);font-size:15px;max-width:460px;margin-bottom:40px;line-height:1.7}
 .hero-btns{position:relative;z-index:2;display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:50px}
@@ -277,17 +279,18 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
     <span><span class="in">In </span><span class="style">Style</span> Studio</span>
   </a>
   <ul>
-    <li><a href="#services" data-lv="Pakalpojumi" data-ru="Услуги">Pakalpojumi</a></li>
-    <li><a href="#gallery" data-lv="Galerija" data-ru="Галерея">Galerija</a></li>
-    <li><a href="#reviews" data-lv="Atsauksmes" data-ru="Отзывы">Atsauksmes</a></li>
-    <li><a href="#contacts" data-lv="Kontakti" data-ru="Контакты">Kontakti</a></li>
+    <li><a href="#services" data-lv="Pakalpojumi" data-ru="Услуги" data-en="Services">Pakalpojumi</a></li>
+    <li><a href="#gallery" data-lv="Galerija" data-ru="Галерея" data-en="Gallery">Galerija</a></li>
+    <li><a href="#reviews" data-lv="Atsauksmes" data-ru="Отзывы" data-en="Reviews">Atsauksmes</a></li>
+    <li><a href="#contacts" data-lv="Kontakti" data-ru="Контакты" data-en="Contacts">Kontakti</a></li>
   </ul>
   <div class="nav-right">
     <div class="lang-switch">
       <button class="lang-btn active" onclick="setLang('lv')">LV</button>
       <button class="lang-btn" onclick="setLang('ru')">RU</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
     </div>
-    <a href="#booking" class="btn-nav" data-lv="Pierakstīties" data-ru="Записаться">Pierakstīties</a>
+    <a href="#booking" class="btn-nav" data-lv="Pierakstīties" data-ru="Записаться" data-en="Book Now">Pierakstīties</a>
     <div class="burger" id="burger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </div>
@@ -296,14 +299,15 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#services" onclick="toggleMenu()" data-lv="Pakalpojumi" data-ru="Услуги">Pakalpojumi</a>
-  <a href="#gallery" onclick="toggleMenu()" data-lv="Galerija" data-ru="Галерея">Galerija</a>
-  <a href="#reviews" onclick="toggleMenu()" data-lv="Atsauksmes" data-ru="Отзывы">Atsauksmes</a>
-  <a href="#contacts" onclick="toggleMenu()" data-lv="Kontakti" data-ru="Контакты">Kontakti</a>
-  <a href="#booking" class="btn-nav" onclick="toggleMenu()" data-lv="Pierakstīties" data-ru="Записаться">Pierakstīties</a>
+  <a href="#services" onclick="toggleMenu()" data-lv="Pakalpojumi" data-ru="Услуги" data-en="Services">Pakalpojumi</a>
+  <a href="#gallery" onclick="toggleMenu()" data-lv="Galerija" data-ru="Галерея" data-en="Gallery">Galerija</a>
+  <a href="#reviews" onclick="toggleMenu()" data-lv="Atsauksmes" data-ru="Отзывы" data-en="Reviews">Atsauksmes</a>
+  <a href="#contacts" onclick="toggleMenu()" data-lv="Kontakti" data-ru="Контакты" data-en="Contacts">Kontakti</a>
+  <a href="#booking" class="btn-nav" onclick="toggleMenu()" data-lv="Pierakstīties" data-ru="Записаться" data-en="Book Now">Pierakstīties</a>
   <div class="lang-switch">
     <button class="lang-btn active" onclick="setLang('lv')">LV</button>
     <button class="lang-btn" onclick="setLang('ru')">RU</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
   </div>
 </div>
 
@@ -313,24 +317,20 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
 
   <!-- HERO PHOTO SLOT: replace src with your photo URL, or upload via click -->
   <div class="hero-photo" id="heroPhotoWrap">
-    <div class="hero-photo-placeholder" id="heroPlaceholder">
-      <div class="upload-icon">📷</div>
-      <div class="upload-hint" data-lv="Noklikšķiniet, lai augšupielādētu fotoattēlu" data-ru="Нажмите для загрузки фото">Noklikšķiniet, lai augšupielādētu fotoattēlu</div>
-      <input type="file" accept="image/*" onchange="loadHeroImage(event)">
-    </div>
+    <img src="https://i.ibb.co/FLByc85J/image.jpg" alt="In Style Studio" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block" onerror="this.parentElement.innerHTML='<div class=\'hero-photo-placeholder\' id=\'heroPlaceholder\'><div class=\'upload-icon\'>📷</div><div class=\'upload-hint\'>Noklikšķiniet, lai augšupielādētu fotoattēlu</div><input type=\'file\' accept=\'image/*\' onchange=\'loadHeroImage(event)\'></div>'">
   </div>
 
-  <div class="hero-badge" data-lv="● Skaistumkopšanas salons · Rīga" data-ru="● Салон красоты · Рига">● Skaistumkopšanas salons · Rīga</div>
+  <div class="hero-badge" data-lv="● Skaistumkopšanas salons · Rīga" data-ru="● Салон красоты · Рига" data-en="● Beauty Salon · Riga">● Skaistumkopšanas salons · Rīga</div>
 
   <h1>
-    <span data-lv='Matu krāsošana un frizūras <em>jebkuras sarežģītības</em> Rīgā' data-ru='Окрашивание волос и стрижки <em>любой сложности</em> в Риге'>Matu krāsošana un frizūras <em>jebkuras sarežģītības</em> Rīgā</span>
+    <span data-lv='Matu krāsošana un frizūras <em>jebkuras sarežģītības</em> Rīgā' data-ru='Окрашивание волос и стрижки <em>любой сложности</em> в Риге' data-en='Hair Coloring &amp; Cuts of <em>any complexity</em> in Riga'>Matu krāsošana un frizūras <em>jebkuras sarežģītības</em> Rīgā</span>
   </h1>
 
-  <p data-lv="Uzticiet savus matus In Style Studio meistariem. Ideāla cenas un premium kvalitātes kombinācija — Airtouch, balayage, izgaismošana, sirmuma maskēšana." data-ru="Попадите в хорошие ручки мастеров In Style Studio. Идеальный баланс цены и премиального качества — Airtouch, балаяж, выход из тёмного, камуфляж седины.">Uzticiet savus matus In Style Studio meistariem. Ideāla cenas un premium kvalitātes kombinācija — Airtouch, balayage, izgaismošana, sirmuma maskēšana.</p>
+  <p data-lv="Uzticiet savus matus In Style Studio meistariem. Ideāla cenas un premium kvalitātes kombinācija — Airtouch, balayage, izgaismošana, sirmuma maskēšana." data-ru="Попадите в хорошие ручки мастеров In Style Studio. Идеальный баланс цены и премиального качества — Airtouch, балаяж, выход из тёмного, камуфляж седины." data-en="Trust your hair to In Style Studio masters. The perfect balance of price and premium quality — Airtouch, balayage, lightening, grey coverage.">Uzticiet savus matus In Style Studio meistariem. Ideāla cenas un premium kvalitātes kombinācija — Airtouch, balayage, izgaismošana, sirmuma maskēšana.</p>
 
   <div class="hero-btns">
     <a href="#booking" class="btn-primary">
-      <span data-lv="Pierakstīties tiešsaistē" data-ru="Записаться онлайн">Pierakstīties tiešsaistē</span>
+      <span data-lv="Pierakstīties tiešsaistē" data-ru="Записаться онлайн" data-en="Book Online">Pierakstīties tiešsaistē</span>
       <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
     <a href="tel:25671773" class="btn-secondary">
@@ -343,7 +343,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
     <div class="hero-meta-item"><span class="star-fill">★★★★★</span> <span>5★ · Google Reviews</span></div>
     <div class="hero-meta-item">
       <svg viewBox="0 0 14 14" fill="none" width="14" height="14"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M7 4v3.5l2 1.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-      <span data-lv="10+ gadu pieredze" data-ru="10+ лет опыта">10+ gadu pieredze</span>
+      <span data-lv="10+ gadu pieredze" data-ru="10+ лет опыта" data-en="10+ years experience">10+ gadu pieredze</span>
     </div>
     <div class="hero-meta-item">
       <svg viewBox="0 0 14 14" fill="none" width="14" height="14"><path d="M7 1.5C4.51 1.5 2.5 3.51 2.5 6c0 3.5 4.5 7 4.5 7s4.5-3.5 4.5-7c0-2.49-2.01-4.5-4.5-4.5z" stroke="currentColor" stroke-width="1.2"/><circle cx="7" cy="6" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>
@@ -354,29 +354,29 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
 
 <!-- WHY -->
 <section class="why" id="why">
-  <div class="section-label" data-lv="In Style Studio" data-ru="In Style Studio">In Style Studio</div>
-  <h2 class="section-h" data-lv="Kāpēc In Style Studio" data-ru="Почему In Style Studio">Kāpēc In Style Studio</h2>
-  <p class="section-sub" data-lv="Četri iemesli, kāpēc klienti atgriežas atkal un atkal." data-ru="Четыре причины, почему клиенты возвращаются снова и снова.">Četri iemesli, kāpēc klienti atgriežas atkal un atkal.</p>
+  <div class="section-label" data-lv="In Style Studio" data-ru="In Style Studio" data-en="In Style Studio">In Style Studio</div>
+  <h2 class="section-h" data-lv="Kāpēc In Style Studio" data-ru="Почему In Style Studio" data-en="Why In Style Studio">Kāpēc In Style Studio</h2>
+  <p class="section-sub" data-lv="Četri iemesli, kāpēc klienti atgriežas atkal un atkal." data-ru="Четыре причины, почему клиенты возвращаются снова и снова." data-en="Four reasons why clients come back again and again.">Četri iemesli, kāpēc klienti atgriežas atkal un atkal.</p>
   <div class="why-grid">
     <div class="why-card reveal">
       <div class="why-icon">✦</div>
-      <h3 data-lv="Sarežģīta matu krāsošana" data-ru="Сложное окрашивание">Sarežģīta matu krāsošana</h3>
-      <p data-lv="Eksperti Airtouch, balayage un precīzā tumšās krāsas izgaismošanā." data-ru="Эксперты в Airtouch, балаяже и аккуратном выходе из тёмного.">Eksperti Airtouch, balayage un precīzā tumšās krāsas izgaismošanā.</p>
+      <h3 data-lv="Sarežģīta matu krāsošana" data-ru="Сложное окрашивание" data-en="Complex Hair Colouring">Sarežģīta matu krāsošana</h3>
+      <p data-lv="Eksperti Airtouch, balayage un precīzā tumšās krāsas izgaismošanā." data-ru="Эксперты в Airtouch, балаяже и аккуратном выходе из тёмного." data-en="Experts in Airtouch, balayage and precise lightening from dark.">Eksperti Airtouch, balayage un precīzā tumšās krāsas izgaismošanā.</p>
     </div>
     <div class="why-card reveal reveal-delay-1">
       <div class="why-icon">✂</div>
-      <h3 data-lv="Vīriešu un sieviešu frizūras" data-ru="Мужские и женские стрижки">Vīriešu un sieviešu frizūras</h3>
-      <p data-lv="Universāli meistari — no klasikas līdz mūsdienu tendencēm." data-ru="Универсальные мастера высокой квалификации — от классики до трендов.">Universāli meistari — no klasikas līdz mūsdienu tendencēm.</p>
+      <h3 data-lv="Vīriešu un sieviešu frizūras" data-ru="Мужские и женские стрижки" data-en="Men's & Women's Haircuts">Vīriešu un sieviešu frizūras</h3>
+      <p data-lv="Universāli meistari — no klasikas līdz mūsdienu tendencēm." data-ru="Универсальные мастера высокой квалификации — от классики до трендов." data-en="Versatile masters — from classic styles to modern trends.">Universāli meistari — no klasikas līdz mūsdienu tendencēm.</p>
     </div>
     <div class="why-card reveal reveal-delay-2">
       <div class="why-icon">♡</div>
-      <h3 data-lv="Matu kopšana" data-ru="Забота о волосах">Matu kopšana</h3>
-      <p data-lv="Risinām šķelto galu problēmas un uzmanīgi maskējam sirmos matus ar premium līdzekļiem." data-ru="Решаем проблемы сечения и бережно маскируем седину премиальными средствами.">Risinām šķelto galu problēmas un uzmanīgi maskējam sirmos matus ar premium līdzekļiem.</p>
+      <h3 data-lv="Matu kopšana" data-ru="Забота о волосах" data-en="Hair Care">Matu kopšana</h3>
+      <p data-lv="Risinām šķelto galu problēmas un uzmanīgi maskējam sirmos matus ar premium līdzekļiem." data-ru="Решаем проблемы сечения и бережно маскируем седину премиальными средствами." data-en="We treat split ends and carefully cover grey with premium products.">Risinām šķelto galu problēmas un uzmanīgi maskējam sirmos matus ar premium līdzekļiem.</p>
     </div>
     <div class="why-card reveal reveal-delay-3">
       <div class="why-icon">☕</div>
-      <h3 data-lv="Siltā atmosfēra" data-ru="Тёплая атмосфера">Siltā atmosfēra</h3>
-      <p data-lv="Draudzīga uzņemšana, kafija un meistari, kuri patiešām jūs uzklausa." data-ru="Дружелюбный приём, кофе и мастера, которые действительно вас слышат.">Draudzīga uzņemšana, kafija un meistari, kuri patiešām jūs uzklausa.</p>
+      <h3 data-lv="Siltā atmosfēra" data-ru="Тёплая атмосфера" data-en="Warm Atmosphere">Siltā atmosfēra</h3>
+      <p data-lv="Draudzīga uzņemšana, kafija un meistari, kuri patiešām jūs uzklausa." data-ru="Дружелюбный приём, кофе и мастера, которые действительно вас слышат." data-en="A friendly welcome, coffee, and stylists who truly listen to you.">Draudzīga uzņemšana, kafija un meistari, kuri patiešām jūs uzklausa.</p>
     </div>
   </div>
 </section>
@@ -386,9 +386,9 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
   <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:64px">
     <div>
       <div class="section-label">Services</div>
-      <h2 class="section-h" data-lv="Pakalpojumi un tehnikas" data-ru="Услуги и техники">Pakalpojumi un tehnikas</h2>
+      <h2 class="section-h" data-lv="Pakalpojumi un tehnikas" data-ru="Услуги и техники" data-en="Services & Techniques">Pakalpojumi un tehnikas</h2>
     </div>
-    <p class="section-sub" style="padding-top:40px" data-lv="Izvēlieties procedūru — mēs atlasīsim ideālo risinājumu jūsu matu tipam." data-ru="Выберите процедуру — мы подберём идеальное решение под ваш тип волос.">Izvēlieties procedūru — mēs atlasīsim ideālo risinājumu jūsu matu tipam.</p>
+    <p class="section-sub" style="padding-top:40px" data-lv="Izvēlieties procedūru — mēs atlasīsim ideālo risinājumu jūsu matu tipam." data-ru="Выберите процедуру — мы подберём идеальное решение под ваш тип волос." data-en="Choose a procedure — we'll find the perfect solution for your hair type.">Izvēlieties procedūru — mēs atlasīsim ideālo risinājumu jūsu matu tipam.</p>
   </div>
   <div class="services-grid">
 
@@ -397,15 +397,15 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
       <div class="srv-img-slot">
         <div class="srv-img-placeholder srv-img-bg-1" id="srv1wrap">
           <div class="srv-upload-icon">📷</div>
-          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото">Augšupielādēt foto</div>
+          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото" data-en="Upload photo">Augšupielādēt foto</div>
           <input type="file" accept="image/*" onchange="loadSrvImage(event,'srv1wrap')">
         </div>
       </div>
       <div class="srv-overlay"></div>
       <div class="srv-arrow">↗</div>
       <div class="srv-content">
-        <h3 data-lv="Sieviešu frizūras" data-ru="Женские стрижки">Sieviešu frizūras</h3>
-        <p data-lv="Griezums, formas modelēšana un individuāla konsultācija." data-ru="Стрижка, моделирование формы и индивидуальная консультация.">Griezums, formas modelēšana un individuāla konsultācija.</p>
+        <h3 data-lv="Sieviešu frizūras" data-ru="Женские стрижки" data-en="Women's Haircuts">Sieviešu frizūras</h3>
+        <p data-lv="Griezums, formas modelēšana un individuāla konsultācija." data-ru="Стрижка, моделирование формы и индивидуальная консультация." data-en="Cut, shape styling and individual consultation.">Griezums, formas modelēšana un individuāla konsultācija.</p>
       </div>
     </div>
 
@@ -414,15 +414,15 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
       <div class="srv-img-slot">
         <div class="srv-img-placeholder srv-img-bg-2" id="srv2wrap">
           <div class="srv-upload-icon">📷</div>
-          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото">Augšupielādēt foto</div>
+          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото" data-en="Upload photo">Augšupielādēt foto</div>
           <input type="file" accept="image/*" onchange="loadSrvImage(event,'srv2wrap')">
         </div>
       </div>
       <div class="srv-overlay"></div>
       <div class="srv-arrow">↗</div>
       <div class="srv-content">
-        <h3 data-lv="Vīriešu frizūras" data-ru="Мужские стрижки">Vīriešu frizūras</h3>
-        <p data-lv="Mūsdienīgas un klasiskās frizūras no meistara Aleksa." data-ru="Современные и классические стрижки от мастера Алекса.">Mūsdienīgas un klasiskās frizūras no meistara Aleksa.</p>
+        <h3 data-lv="Vīriešu frizūras" data-ru="Мужские стрижки" data-en="Men's Haircuts">Vīriešu frizūras</h3>
+        <p data-lv="Mūsdienīgas un klasiskās frizūras no meistara Aleksa." data-ru="Современные и классические стрижки от мастера Алекса." data-en="Modern and classic cuts by master stylist Alex.">Mūsdienīgas un klasiskās frizūras no meistara Aleksa.</p>
       </div>
     </div>
 
@@ -431,15 +431,15 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
       <div class="srv-img-slot">
         <div class="srv-img-placeholder srv-img-bg-3" id="srv3wrap">
           <div class="srv-upload-icon">📷</div>
-          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото">Augšupielādēt foto</div>
+          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото" data-en="Upload photo">Augšupielādēt foto</div>
           <input type="file" accept="image/*" onchange="loadSrvImage(event,'srv3wrap')">
         </div>
       </div>
       <div class="srv-overlay"></div>
       <div class="srv-arrow">↗</div>
       <div class="srv-content">
-        <h3 data-lv="Veidošana un stilēšana" data-ru="Укладки и стайлинг">Veidošana un stilēšana</h3>
-        <p data-lv="Svētku, ikdienas un romantiskas frizūras." data-ru="Праздничные, повседневные и романтические образы.">Svētku, ikdienas un romantiskas frizūras.</p>
+        <h3 data-lv="Veidošana un stilēšana" data-ru="Укладки и стайлинг" data-en="Blowout & Styling">Veidošana un stilēšana</h3>
+        <p data-lv="Svētku, ikdienas un romantiskas frizūras." data-ru="Праздничные, повседневные и романтические образы." data-en="Occasion, everyday and romantic hairstyles.">Svētku, ikdienas un romantiskas frizūras.</p>
       </div>
     </div>
 
@@ -448,15 +448,15 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
       <div class="srv-img-slot">
         <div class="srv-img-placeholder srv-img-bg-4" id="srv4wrap">
           <div class="srv-upload-icon">📷</div>
-          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото">Augšupielādēt foto</div>
+          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото" data-en="Upload photo">Augšupielādēt foto</div>
           <input type="file" accept="image/*" onchange="loadSrvImage(event,'srv4wrap')">
         </div>
       </div>
       <div class="srv-overlay"></div>
       <div class="srv-arrow">↗</div>
       <div class="srv-content">
-        <h3 data-lv="Krāsošana" data-ru="Окрашивание">Krāsošana</h3>
-        <p data-lv="Airtouch, balayage, izgaismošana, sirmuma maskēšana." data-ru="Airtouch, балаяж, выход из тёмного, камуфляж седины.">Airtouch, balayage, izgaismošana, sirmuma maskēšana.</p>
+        <h3 data-lv="Krāsošana" data-ru="Окрашивание" data-en="Colouring">Krāsošana</h3>
+        <p data-lv="Airtouch, balayage, izgaismošana, sirmuma maskēšana." data-ru="Airtouch, балаяж, выход из тёмного, камуфляж седины." data-en="Airtouch, balayage, lightening, grey coverage.">Airtouch, balayage, izgaismošana, sirmuma maskēšana.</p>
       </div>
     </div>
 
@@ -465,15 +465,15 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
       <div class="srv-img-slot">
         <div class="srv-img-placeholder srv-img-bg-5" id="srv5wrap">
           <div class="srv-upload-icon">📷</div>
-          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото">Augšupielādēt foto</div>
+          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото" data-en="Upload photo">Augšupielādēt foto</div>
           <input type="file" accept="image/*" onchange="loadSrvImage(event,'srv5wrap')">
         </div>
       </div>
       <div class="srv-overlay"></div>
       <div class="srv-arrow">↗</div>
       <div class="srv-content">
-        <h3 data-lv="Kopšana un atjaunošana" data-ru="Уход и восстановление">Kopšana un atjaunošana</h3>
-        <p data-lv="Dziļās maskas un barojošas procedūras garajiem matiem." data-ru="Глубокие маски и питательные процедуры для длины.">Dziļās maskas un barojošas procedūras garajiem matiem.</p>
+        <h3 data-lv="Kopšana un atjaunošana" data-ru="Уход и восстановление" data-en="Care & Restoration">Kopšana un atjaunošana</h3>
+        <p data-lv="Dziļās maskas un barojošas procedūras garajiem matiem." data-ru="Глубокие маски и питательные процедуры для длины." data-en="Deep masks and nourishing treatments for long hair.">Dziļās maskas un barojošas procedūras garajiem matiem.</p>
       </div>
     </div>
 
@@ -482,15 +482,15 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
       <div class="srv-img-slot">
         <div class="srv-img-placeholder srv-img-bg-6" id="srv6wrap">
           <div class="srv-upload-icon">📷</div>
-          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото">Augšupielādēt foto</div>
+          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото" data-en="Upload photo">Augšupielādēt foto</div>
           <input type="file" accept="image/*" onchange="loadSrvImage(event,'srv6wrap')">
         </div>
       </div>
       <div class="srv-overlay"></div>
       <div class="srv-arrow">↗</div>
       <div class="srv-content">
-        <h3 data-lv="Meistara konsultācija" data-ru="Консультация мастера">Meistara konsultācija</h3>
-        <p data-lv="Matu stāvokļa analīze un individuālās programmas izvēle." data-ru="Разбор состояния волос и подбор индивидуальной программы.">Matu stāvokļa analīze un individuālās programmas izvēle.</p>
+        <h3 data-lv="Meistara konsultācija" data-ru="Консультация мастера" data-en="Stylist Consultation">Meistara konsultācija</h3>
+        <p data-lv="Matu stāvokļa analīze un individuālās programmas izvēle." data-ru="Разбор состояния волос и подбор индивидуальной программы." data-en="Hair condition analysis and a tailored treatment programme.">Matu stāvokļa analīze un individuālās programmas izvēle.</p>
       </div>
     </div>
 
@@ -502,12 +502,12 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
   <div class="gallery-header">
     <div>
       <div class="section-label">@instyleriga</div>
-      <h2 class="section-h" data-lv="Mūsu darbi" data-ru="Наши работы">Mūsu darbi</h2>
-      <p class="section-sub" data-lv="Studijas klientu reālie rezultāti. Sekojiet Instagram @instyleriga." data-ru="Реальные результаты клиентов студии. Подписывайтесь в Instagram @instyleriga.">Studijas klientu reālie rezultāti. Sekojiet Instagram @instyleriga.</p>
+      <h2 class="section-h" data-lv="Mūsu darbi" data-ru="Наши работы" data-en="Our Work">Mūsu darbi</h2>
+      <p class="section-sub" data-lv="Studijas klientu reālie rezultāti. Sekojiet Instagram @instyleriga." data-ru="Реальные результаты клиентов студии. Подписывайтесь в Instagram @instyleriga." data-en="Real results from our clients. Follow us on Instagram @instyleriga.">Studijas klientu reālie rezultāti. Sekojiet Instagram @instyleriga.</p>
     </div>
     <a href="https://instagram.com/instyleriga" target="_blank" class="btn-outline">
       <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><rect x="2" y="2" width="12" height="12" rx="3" stroke="currentColor" stroke-width="1.3"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="4" r="0.8" fill="currentColor"/></svg>
-      <span data-lv="Skatīt Instagram" data-ru="Смотреть в Instagram">Skatīt Instagram</span>
+      <span data-lv="Skatīt Instagram" data-ru="Смотреть в Instagram" data-en="View on Instagram">Skatīt Instagram</span>
     </a>
   </div>
   <div class="gallery-grid">
@@ -526,29 +526,29 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
 <!-- REVIEWS -->
 <section id="reviews" style="padding:100px 40px">
   <div class="section-label">Reviews</div>
-  <h2 class="section-h" data-lv="Ko saka klienti" data-ru="Что говорят клиенты">Ko saka klienti</h2>
-  <p class="section-sub" data-lv="Īstas atsauksmes no Google un Instagram." data-ru="Настоящие отзывы из Google и Instagram.">Īstas atsauksmes no Google un Instagram.</p>
+  <h2 class="section-h" data-lv="Ko saka klienti" data-ru="Что говорят клиенты" data-en="What Clients Say">Ko saka klienti</h2>
+  <p class="section-sub" data-lv="Īstas atsauksmes no Google un Instagram." data-ru="Настоящие отзывы из Google и Instagram." data-en="Real reviews from Google and Instagram.">Īstas atsauksmes no Google un Instagram.</p>
   <div class="reviews-grid">
     <div class="review-card reveal">
       <div class="review-quote">❝</div>
       <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-      <p class="review-text" data-lv="Ļoti ilgi izvēlējos salonu. Ļoti laba atmosfēra. Meistare Valentīna paveica savu darbu lieliski. Meitenes un puiši, jūs nenožēlosiet — nonāksiet labās rokās." data-ru="Очень долго подходила к выбору салона. Очень хорошая атмосфера. Мастер Валентина выполнила свою работу на отлично. Попадёте в хорошие ручки.">Ļoti ilgi izvēlējos salonu. Ļoti laba atmosfēra. Meistare Valentīna paveica savu darbu lieliski. Meitenes un puiši, jūs nenožēlosiet — nonāksiet labās rokās.</p>
+      <p class="review-text" data-lv="Ļoti ilgi izvēlējos salonu. Ļoti laba atmosfēra. Meistare Valentīna paveica savu darbu lieliski. Meitenes un puiši, jūs nenožēlosiet — nonāksiet labās rokās." data-ru="Очень долго подходила к выбору салона. Очень хорошая атмосфера. Мастер Валентина выполнила свою работу на отлично. Попадёте в хорошие ручки." data-en="I spent a long time choosing a salon. The atmosphere is wonderful. Stylist Valentīna did an excellent job. Girls and guys, you won't regret it — you're in good hands.">Ļoti ilgi izvēlējos salonu. Ļoti laba atmosfēra. Meistare Valentīna paveica savu darbu lieliski. Meitenes un puiši, jūs nenožēlosiet — nonāksiet labās rokās.</p>
       <div class="review-author">Ася</div>
-      <div class="review-role" data-lv="Klients" data-ru="Клиент">Klients</div>
+      <div class="review-role" data-lv="Klients" data-ru="Клиент" data-en="Client">Klients</div>
     </div>
     <div class="review-card reveal reveal-delay-1">
       <div class="review-quote">❝</div>
       <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-      <p class="review-text" data-lv="Jauns frizūras stils — izdevās lieliski! Alekss kā vienmēr ir augstā līmenī, ne tikai sieviešu frizūrās." data-ru="Новый стиль причёски — справились на отлично! Алекс как всегда на высоте мастерства, не только в женских стрижках.">Jauns frizūras stils — izdevās lieliski! Alekss kā vienmēr ir augstā līmenī, ne tikai sieviešu frizūrās.</p>
+      <p class="review-text" data-lv="Jauns frizūras stils — izdevās lieliski! Alekss kā vienmēr ir augstā līmenī, ne tikai sieviešu frizūrās." data-ru="Новый стиль причёски — справились на отлично! Алекс как всегда на высоте мастерства, не только в женских стрижках." data-en="New hairstyle — absolutely nailed it! Alex is always at the top of his craft, not just for women's cuts.">Jauns frizūras stils — izdevās lieliski! Alekss kā vienmēr ir augstā līmenī, ne tikai sieviešu frizūrās.</p>
       <div class="review-author">raveroff</div>
       <div class="review-role">Local Guide · Google</div>
     </div>
     <div class="review-card reveal reveal-delay-2">
       <div class="review-quote">❝</div>
       <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-      <p class="review-text" data-lv="Mainīju daudzus salonus. In Style Studio es atradu savu ideālo meistaru — tā ir Alekss! Viss izdarīts tā, kā iecerēts, un pat labāk." data-ru="Сменила кучу салонов. В In Style Studio я нашла своего идеального мастера — это Алекс! Всё задуманное сделал и даже лучше.">Mainīju daudzus salonus. In Style Studio es atradu savu ideālo meistaru — tā ir Alekss! Viss izdarīts tā, kā iecerēts, un pat labāk.</p>
+      <p class="review-text" data-lv="Mainīju daudzus salonus. In Style Studio es atradu savu ideālo meistaru — tā ir Alekss! Viss izdarīts tā, kā iecerēts, un pat labāk." data-ru="Сменила кучу салонов. В In Style Studio я нашла своего идеального мастера — это Алекс! Всё задуманное сделал и даже лучше." data-en="I tried so many salons. At In Style Studio I found my perfect stylist — Alex! Everything I wanted was done, and even better.">Mainīju daudzus salonus. In Style Studio es atradu savu ideālo meistaru — tā ir Alekss! Viss izdarīts tā, kā iecerēts, un pat labāk.</p>
       <div class="review-author">Елена</div>
-      <div class="review-role" data-lv="Klients" data-ru="Клиент">Klients</div>
+      <div class="review-role" data-lv="Klients" data-ru="Клиент" data-en="Client">Klients</div>
     </div>
   </div>
 </section>
@@ -556,15 +556,15 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
 <!-- BOOKING -->
 <section class="booking" id="booking">
   <div class="section-label">Booking</div>
-  <h2 class="section-h" data-lv="Pierakstīties tiešsaistē" data-ru="Записаться онлайн">Pierakstīties tiešsaistē</h2>
-  <p class="section-sub" data-lv="Atstājiet pieteikumu — administrators sazināsies ar jums 30 minūšu laikā." data-ru="Оставьте заявку — администратор свяжется с вами в течение 30 минут.">Atstājiet pieteikumu — administrators sazināsies ar jums 30 minūšu laikā.</p>
+  <h2 class="section-h" data-lv="Pierakstīties tiešsaistē" data-ru="Записаться онлайн" data-en="Book Online">Pierakstīties tiešsaistē</h2>
+  <p class="section-sub" data-lv="Atstājiet pieteikumu — administrators sazināsies ar jums 30 minūšu laikā." data-ru="Оставьте заявку — администратор свяжется с вами в течение 30 минут." data-en="Leave a request — our administrator will contact you within 30 minutes.">Atstājiet pieteikumu — administrators sazināsies ar jums 30 minūšu laikā.</p>
   <div class="booking-inner">
     <div class="booking-info reveal">
       <ul class="contact-list">
         <li class="contact-item">
           <div class="contact-icon"><svg viewBox="0 0 16 16" fill="none" width="16" height="16"><path d="M2 4c0-.55.45-1 1-1h2.5l1 2.5-1.5 1c.69 1.5 2 2.81 3.5 3.5l1-1.5L12 9.5V12c0 .55-.45 1-1 1C5.48 13 2 9.52 2 4z" stroke="currentColor" stroke-width="1.2"/></svg></div>
           <div class="contact-detail">
-            <div class="contact-label" data-lv="Vai zvaniet" data-ru="Или позвоните">Vai zvaniet</div>
+            <div class="contact-label" data-lv="Vai zvaniet" data-ru="Или позвоните" data-en="Or call us">Vai zvaniet</div>
             <div class="contact-val"><a href="tel:25671773" style="color:inherit;text-decoration:none">25 671 773</a></div>
           </div>
         </li>
@@ -588,48 +588,48 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
       <div id="formWrap">
         <div class="form-row">
           <div class="form-group">
-            <label data-lv="Jūsu vārds" data-ru="Ваше имя">Jūsu vārds</label>
-            <input type="text" id="fname" data-lv-ph="Vārds" data-ru-ph="Имя" placeholder="Vārds" autocomplete="name">
+            <label data-lv="Jūsu vārds" data-ru="Ваше имя" data-en="Your name">Jūsu vārds</label>
+            <input type="text" id="fname" data-lv-ph="Vārds" data-ru-ph="Имя" data-en-ph="Name" placeholder="Vārds" autocomplete="name">
           </div>
           <div class="form-group">
-            <label data-lv="Tālrunis" data-ru="Телефон">Tālrunis</label>
+            <label data-lv="Tālrunis" data-ru="Телефон" data-en="Phone">Tālrunis</label>
             <input type="tel" id="fphone" placeholder="+371..." autocomplete="tel">
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label data-lv="Pakalpojums" data-ru="Услуга">Pakalpojums</label>
+            <label data-lv="Pakalpojums" data-ru="Услуга" data-en="Service">Pakalpojums</label>
             <select id="fservice">
-              <option value="" data-lv="Izvēlieties pakalpojumu" data-ru="Выберите услугу">Izvēlieties pakalpojumu</option>
-              <option data-lv="Sieviešu frizūra" data-ru="Женская стрижка">Sieviešu frizūra</option>
-              <option data-lv="Vīriešu frizūra" data-ru="Мужская стрижка">Vīriešu frizūra</option>
+              <option value="" data-lv="Izvēlieties pakalpojumu" data-ru="Выберите услугу" data-en="Choose a service">Izvēlieties pakalpojumu</option>
+              <option data-lv="Sieviešu frizūra" data-ru="Женская стрижка" data-en="Women's Haircut">Sieviešu frizūra</option>
+              <option data-lv="Vīriešu frizūra" data-ru="Мужская стрижка" data-en="Men's Haircut">Vīriešu frizūra</option>
               <option>Airtouch</option>
               <option>Balayage</option>
-              <option data-lv="Izgaismošana" data-ru="Выход из тёмного">Izgaismošana</option>
-              <option data-lv="Sirmuma maskēšana" data-ru="Камуфляж седины">Sirmuma maskēšana</option>
-              <option data-lv="Veidošana un stilēšana" data-ru="Укладка и стайлинг">Veidošana un stilēšana</option>
-              <option data-lv="Kopšana un atjaunošana" data-ru="Уход и восстановление">Kopšana un atjaunošana</option>
-              <option data-lv="Meistara konsultācija" data-ru="Консультация мастера">Meistara konsultācija</option>
+              <option data-lv="Izgaismošana" data-ru="Выход из тёмного" data-en="Lightening">Izgaismošana</option>
+              <option data-lv="Sirmuma maskēšana" data-ru="Камуфляж седины" data-en="Grey Coverage">Sirmuma maskēšana</option>
+              <option data-lv="Veidošana un stilēšana" data-ru="Укладка и стайлинг" data-en="Blowout & Styling">Veidošana un stilēšana</option>
+              <option data-lv="Kopšana un atjaunošana" data-ru="Уход и восстановление" data-en="Care & Restoration">Kopšana un atjaunošana</option>
+              <option data-lv="Meistara konsultācija" data-ru="Консультация мастера" data-en="Stylist Consultation">Meistara konsultācija</option>
             </select>
           </div>
           <div class="form-group">
-            <label data-lv="Vēlamais datums" data-ru="Желаемая дата">Vēlamais datums</label>
+            <label data-lv="Vēlamais datums" data-ru="Желаемая дата" data-en="Preferred date">Vēlamais datums</label>
             <input type="date" id="fdate">
           </div>
         </div>
         <div class="form-group full">
-          <label data-lv="Komentārs (neobligāti)" data-ru="Комментарий (необязательно)">Komentārs (neobligāti)</label>
-          <textarea id="fcomment" data-lv-ph="Vēlmes, jautājumi..." data-ru-ph="Пожелания, вопросы..." placeholder="Vēlmes, jautājumi..."></textarea>
+          <label data-lv="Komentārs (neobligāti)" data-ru="Комментарий (необязательно)" data-en="Comment (optional)">Komentārs (neobligāti)</label>
+          <textarea id="fcomment" data-lv-ph="Vēlmes, jautājumi..." data-ru-ph="Пожелания, вопросы..." data-en-ph="Wishes, questions..." placeholder="Vēlmes, jautājumi..."></textarea>
         </div>
         <button class="btn-submit" id="submitBtn" onclick="submitForm()">
-          <span data-lv="Nosūtīt pieteikumu" data-ru="Отправить заявку">Nosūtīt pieteikumu</span>
+          <span data-lv="Nosūtīt pieteikumu" data-ru="Отправить заявку" data-en="Send Request">Nosūtīt pieteikumu</span>
           <svg viewBox="0 0 16 16" fill="none" width="16" height="16"><path d="M2 8h12M10 4l4 4-4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
       </div>
       <div class="success-msg" id="successMsg">
         <div class="success-icon">✓</div>
-        <h3 data-lv="Pieteikums nosūtīts!" data-ru="Заявка отправлена!">Pieteikums nosūtīts!</h3>
-        <p data-lv="Mēs sazināsimies ar jums 30 minūšu laikā." data-ru="Мы свяжемся с вами в течение 30 минут.">Mēs sazināsimies ar jums 30 minūšu laikā.</p>
+        <h3 data-lv="Pieteikums nosūtīts!" data-ru="Заявка отправлена!" data-en="Request Sent!">Pieteikums nosūtīts!</h3>
+        <p data-lv="Mēs sazināsimies ar jums 30 minūšu laikā." data-ru="Мы свяжемся с вами в течение 30 минут." data-en="We will contact you within 30 minutes.">Mēs sazināsimies ar jums 30 minūšu laikā.</p>
       </div>
     </div>
   </div>
@@ -640,18 +640,18 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
   <div class="footer-top">
     <div class="footer-brand">
       <div class="footer-logo"><span>In <span class="style">Style</span> Studio</span></div>
-      <p class="footer-desc" data-lv="Premium skaistumkopšanas salons Rīgā." data-ru="Премиальный салон красоты в Риге.">Premium skaistumkopšanas salons Rīgā.</p>
+      <p class="footer-desc" data-lv="Premium skaistumkopšanas salons Rīgā." data-ru="Премиальный салон красоты в Риге." data-en="Premium beauty salon in Riga.">Premium skaistumkopšanas salons Rīgā.</p>
       <div class="map-wrap">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500!2d24.1682096!3d56.9248762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTbCsDU1JzI5LjYiTiAyNMKwMTAnMDUuNiJF!5e0!3m2!1slv!2slv!4v1" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="In Style Studio kartē"></iframe>
       </div>
     </div>
     <div>
-      <div class="footer-h" data-lv="Navigācija" data-ru="Навигация">Navigācija</div>
+      <div class="footer-h" data-lv="Navigācija" data-ru="Навигация" data-en="Navigation">Navigācija</div>
       <ul class="footer-links">
-        <li><a href="#services" data-lv="Pakalpojumi" data-ru="Услуги">Pakalpojumi</a></li>
-        <li><a href="#gallery" data-lv="Galerija" data-ru="Галерея">Galerija</a></li>
-        <li><a href="#reviews" data-lv="Atsauksmes" data-ru="Отзывы">Atsauksmes</a></li>
-        <li><a href="#booking" data-lv="Pierakstīties" data-ru="Записаться">Pierakstīties</a></li>
+        <li><a href="#services" data-lv="Pakalpojumi" data-ru="Услуги" data-en="Services">Pakalpojumi</a></li>
+        <li><a href="#gallery" data-lv="Galerija" data-ru="Галерея" data-en="Gallery">Galerija</a></li>
+        <li><a href="#reviews" data-lv="Atsauksmes" data-ru="Отзывы" data-en="Reviews">Atsauksmes</a></li>
+        <li><a href="#booking" data-lv="Pierakstīties" data-ru="Записаться" data-en="Book Now">Pierakstīties</a></li>
       </ul>
     </div>
     <div>
@@ -671,15 +671,15 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
         </div>
       </div>
       <div class="footer-hours" style="margin-top:24px">
-        <div class="footer-h" data-lv="Darba laiks" data-ru="Часы работы">Darba laiks</div>
-        <div class="hour-row"><span data-lv="Pr–Pk" data-ru="Пн–Пт">Pr–Pk</span><span>10:00 – 20:00</span></div>
-        <div class="hour-row"><span data-lv="Se" data-ru="Сб">Se</span><span>10:00 – 18:00</span></div>
-        <div class="hour-row" style="border-bottom:none"><span data-lv="Sv" data-ru="Вс">Sv</span><span data-lv="pēc iepriekšējas pierakstīšanās" data-ru="по записи">pēc iepriekšējas pierakstīšanās</span></div>
+        <div class="footer-h" data-lv="Darba laiks" data-ru="Часы работы" data-en="Opening Hours">Darba laiks</div>
+        <div class="hour-row"><span data-lv="Pr–Pk" data-ru="Пн–Пт" data-en="Mon–Fri">Pr–Pk</span><span>10:00 – 20:00</span></div>
+        <div class="hour-row"><span data-lv="Se" data-ru="Сб" data-en="Sat">Se</span><span>10:00 – 18:00</span></div>
+        <div class="hour-row" style="border-bottom:none"><span data-lv="Sv" data-ru="Вс" data-en="Sun">Sv</span><span data-lv="pēc iepriekšējas pierakstīšanās" data-ru="по записи" data-en="by appointment">pēc iepriekšējas pierakstīšanās</span></div>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <span data-lv="© In Style Studio. Visas tiesības aizsargātas." data-ru="© In Style Studio. Все права защищены.">© In Style Studio. Visas tiesības aizsargātas.</span>
+    <span data-lv="© In Style Studio. Visas tiesības aizsargātas." data-ru="© In Style Studio. Все права защищены." data-en="© In Style Studio. All rights reserved.">© In Style Studio. Visas tiesības aizsargātas.</span>
     <span>Latgales iela 222, Rīga</span>
   </div>
 </footer>
@@ -730,24 +730,27 @@ async function submitForm(){
 
   const errMsg = lang()==='ru'
     ? 'Пожалуйста, заполните имя, телефон и выберите услугу.'
+    : lang()==='en'
+    ? 'Please fill in your name, phone and choose a service.'
     : 'Lūdzu, aizpildiet vārdu, tālruni un izvēlieties pakalpojumu.';
   if(!name||!phone||!service){ alert(errMsg); return; }
 
   const btn = document.getElementById('submitBtn');
   btn.disabled = true;
-  btn.querySelector('span').textContent = lang()==='ru' ? 'Отправляем...' : 'Sūtam...';
+  btn.querySelector('span').textContent = lang()==='ru' ? 'Отправляем...' : lang()==='en' ? 'Sending...' : 'Sūtam...';
 
-  const dateStr = date || (lang()==='ru' ? 'не указана' : 'nav norādīts');
+  const dateStr = date || (lang()==='ru' ? 'не указана' : lang()==='en' ? 'not specified' : 'nav norādīts');
   const commentStr = comment || '—';
 
+  const l = lang();
   const message =
 `📩 <b>Jauns pieteikums — In Style Studio</b>
 
-👤 <b>${lang()==='ru'?'Имя':'Vārds'}:</b> ${name}
-📞 <b>${lang()==='ru'?'Телефон':'Tālrunis'}:</b> ${phone}
-✂️ <b>${lang()==='ru'?'Услуга':'Pakalpojums'}:</b> ${service}
-📅 <b>${lang()==='ru'?'Дата':'Datums'}:</b> ${dateStr}
-💬 <b>${lang()==='ru'?'Комментарий':'Komentārs'}:</b> ${commentStr}`;
+👤 <b>${l==='ru'?'Имя':l==='en'?'Name':'Vārds'}:</b> ${name}
+📞 <b>${l==='ru'?'Телефон':l==='en'?'Phone':'Tālrunis'}:</b> ${phone}
+✂️ <b>${l==='ru'?'Услуга':l==='en'?'Service':'Pakalpojums'}:</b> ${service}
+📅 <b>${l==='ru'?'Дата':l==='en'?'Date':'Datums'}:</b> ${dateStr}
+💬 <b>${l==='ru'?'Комментарий':l==='en'?'Comment':'Komentārs'}:</b> ${commentStr}`;
 
   try{
     const ok = await sendToTelegram(message);
@@ -760,10 +763,12 @@ async function submitForm(){
   } catch(e){
     const fallback = lang()==='ru'
       ? 'Ошибка отправки. Позвоните: 25 671 773'
+      : lang()==='en'
+      ? 'Sending error. Please call: 25 671 773'
       : 'Kļūda. Zvaniet: 25 671 773';
     alert(fallback);
     btn.disabled = false;
-    btn.querySelector('span').textContent = lang()==='ru' ? 'Отправить заявку' : 'Nosūtīt pieteikumu';
+    btn.querySelector('span').textContent = lang()==='ru' ? 'Отправить заявку' : lang()==='en' ? 'Send Request' : 'Nosūtīt pieteikumu';
   }
 }
 
@@ -774,8 +779,8 @@ function setLang(l){
     b.classList.toggle('active', b.textContent.toLowerCase()===l);
   });
 
-  // Translate all data-lv / data-ru attributes
-  document.querySelectorAll('[data-lv],[data-ru]').forEach(el=>{
+  // Translate all data-lv / data-ru / data-en attributes
+  document.querySelectorAll('[data-lv],[data-ru],[data-en]').forEach(el=>{
     const val = el.getAttribute('data-'+l);
     if(!val) return;
     // h1 span — render HTML (for <em>)
@@ -791,11 +796,17 @@ function setLang(l){
     el.textContent = val;
   });
 
-  // translate select first option separately
+  // translate select options separately
   document.querySelectorAll('select option').forEach(o=>{
     const v = o.getAttribute('data-'+l);
     if(v) o.textContent = v;
   });
+
+  // apply Playfair Display for LV, Cormorant Garamond for others
+  document.documentElement.style.setProperty(
+    '--hero-font',
+    l==='lv' ? "'Playfair Display', serif" : "'Cormorant Garamond', serif"
+  );
 }
 
 // ─── NAV SCROLL ─────────────────────────────────────────────────
