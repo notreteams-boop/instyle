@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://notreteams-boop.github.io/instyle/sitemap.xml
