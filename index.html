@@ -5,6 +5,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Salons «Tev» — Frizieris un skaistumkopšana Rīgā</title>
 <meta name="description" content="Skaistumkopšanas salons «Tev» Rīgā. Griezumi, krāsošana, veidošana. Prūšu iela 20, Latgales priekšpilsēta.">
+<meta name="keywords" content="frizieris Rīgā, skaistumkopšanas salons, matu krāsošana Rīgā, sieviešu frizūras, vīriešu frizūras, balayage, airtouch, salons Tev">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://notreteams-boop.github.io/instyle/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Salons «Tev» — Frizieris un skaistumkopšana Rīgā">
+<meta property="og:description" content="Skaistumkopšanas salons «Tev» Rīgā. Griezumi, krāsošana, veidošana. Prūšu iela 20, Latgales priekšpilsēta.">
+<meta property="og:url" content="https://notreteams-boop.github.io/instyle/">
+<meta property="og:locale" content="lv_LV">
+<meta property="og:site_name" content="Salons Tev">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Salons «Tev» — Frizieris un skaistumkopšana Rīgā">
+<meta name="twitter:description" content="Skaistumkopšanas salons «Tev» Rīgā. Griezumi, krāsošana, veidošana.">
+
+<!-- LocalBusiness structured data for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Tev",
+  "image": "https://notreteams-boop.github.io/instyle/",
+  "url": "https://notreteams-boop.github.io/instyle/",
+  "telephone": "+37167261401",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Prūšu iela 20",
+    "addressLocality": "Rīga",
+    "addressRegion": "Latgales priekšpilsēta",
+    "addressCountry": "LV"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "1"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    }
+  ],
+  "sameAs": []
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
@@ -382,118 +433,59 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
 </section>
 
 <!-- SERVICES -->
+<style>
+.srv-list{display:flex;flex-direction:column;margin-top:64px}
+.srv-row{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:28px 0;border-bottom:1px solid var(--border);transition:border-color 0.3s}
+.srv-row:first-child{border-top:1px solid var(--border)}
+.srv-row:hover{border-bottom-color:var(--border2)}
+.srv-row:hover .srv-row-num{color:var(--accent)}
+.srv-row-num{font-family:'Cormorant Garamond',serif;font-size:13px;color:rgba(255,255,255,0.2);letter-spacing:0.1em;min-width:32px;transition:color 0.3s}
+.srv-row-name{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,32px);font-weight:400;color:var(--text);flex:1}
+.srv-row-desc{font-size:13px;color:var(--text2);text-align:right;max-width:260px;line-height:1.5}
+@media(max-width:600px){
+  .srv-row{flex-wrap:wrap;gap:8px}
+  .srv-row-desc{text-align:left;max-width:100%}
+}
+</style>
 <section id="services" style="padding:100px 40px">
-  <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:64px">
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:24px">
     <div>
       <div class="section-label">Services</div>
       <h2 class="section-h" data-lv="Pakalpojumi un tehnikas" data-ru="Услуги и техники" data-en="Services & Techniques">Pakalpojumi un tehnikas</h2>
     </div>
     <p class="section-sub" style="padding-top:40px" data-lv="Izvēlieties procedūru — mēs atlasīsim ideālo risinājumu jūsu matu tipam." data-ru="Выберите процедуру — мы подберём идеальное решение под ваш тип волос." data-en="Choose a procedure — we'll find the perfect solution for your hair type.">Izvēlieties procedūru — mēs atlasīsim ideālo risinājumu jūsu matu tipam.</p>
   </div>
-  <div class="services-grid">
-
-    <!-- SERVICE 1 -->
-    <div class="srv-card reveal">
-      <div class="srv-img-slot">
-        <div class="srv-img-placeholder srv-img-bg-1" id="srv1wrap">
-          <div class="srv-upload-icon">📷</div>
-          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото" data-en="Upload photo">Augšupielādēt foto</div>
-          <input type="file" accept="image/*" onchange="loadSrvImage(event,'srv1wrap')">
-        </div>
-      </div>
-      <div class="srv-overlay"></div>
-      <div class="srv-arrow">↗</div>
-      <div class="srv-content">
-        <h3 data-lv="Sieviešu frizūras" data-ru="Женские стрижки" data-en="Women's Haircuts">Sieviešu frizūras</h3>
-        <p data-lv="Griezums, formas modelēšana un individuāla konsultācija." data-ru="Стрижка, моделирование формы и индивидуальная консультация." data-en="Cut, shape styling and individual consultation.">Griezums, formas modelēšana un individuāla konsultācija.</p>
-      </div>
+  <div class="srv-list">
+    <div class="srv-row reveal">
+      <span class="srv-row-num">01</span>
+      <span class="srv-row-name" data-lv="Sieviešu frizūras" data-ru="Женские стрижки" data-en="Women's Haircuts">Sieviešu frizūras</span>
+      <span class="srv-row-desc" data-lv="Griezums, formas modelēšana un individuāla konsultācija." data-ru="Стрижка, моделирование формы и индивидуальная консультация." data-en="Cut, shape styling and individual consultation.">Griezums, formas modelēšana un individuāla konsultācija.</span>
     </div>
-
-    <!-- SERVICE 2 -->
-    <div class="srv-card reveal reveal-delay-1">
-      <div class="srv-img-slot">
-        <div class="srv-img-placeholder srv-img-bg-2" id="srv2wrap">
-          <div class="srv-upload-icon">📷</div>
-          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото" data-en="Upload photo">Augšupielādēt foto</div>
-          <input type="file" accept="image/*" onchange="loadSrvImage(event,'srv2wrap')">
-        </div>
-      </div>
-      <div class="srv-overlay"></div>
-      <div class="srv-arrow">↗</div>
-      <div class="srv-content">
-        <h3 data-lv="Vīriešu frizūras" data-ru="Мужские стрижки" data-en="Men's Haircuts">Vīriešu frizūras</h3>
-        <p data-lv="Mūsdienīgas un klasiskās frizūras no meistara Aleksa." data-ru="Современные и классические стрижки от мастера Алекса." data-en="Modern and classic cuts by master stylist Alex.">Mūsdienīgas un klasiskās frizūras no meistara Aleksa.</p>
-      </div>
+    <div class="srv-row reveal reveal-delay-1">
+      <span class="srv-row-num">02</span>
+      <span class="srv-row-name" data-lv="Vīriešu frizūras" data-ru="Мужские стрижки" data-en="Men's Haircuts">Vīriešu frizūras</span>
+      <span class="srv-row-desc" data-lv="Mūsdienīgas un klasiskās frizūras no meistara Aleksa." data-ru="Современные и классические стрижки от мастера Алекса." data-en="Modern and classic cuts by master stylist Alex.">Mūsdienīgas un klasiskās frizūras no meistara Aleksa.</span>
     </div>
-
-    <!-- SERVICE 3 -->
-    <div class="srv-card reveal reveal-delay-2">
-      <div class="srv-img-slot">
-        <div class="srv-img-placeholder srv-img-bg-3" id="srv3wrap">
-          <div class="srv-upload-icon">📷</div>
-          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото" data-en="Upload photo">Augšupielādēt foto</div>
-          <input type="file" accept="image/*" onchange="loadSrvImage(event,'srv3wrap')">
-        </div>
-      </div>
-      <div class="srv-overlay"></div>
-      <div class="srv-arrow">↗</div>
-      <div class="srv-content">
-        <h3 data-lv="Veidošana un stilēšana" data-ru="Укладки и стайлинг" data-en="Blowout & Styling">Veidošana un stilēšana</h3>
-        <p data-lv="Svētku, ikdienas un romantiskas frizūras." data-ru="Праздничные, повседневные и романтические образы." data-en="Occasion, everyday and romantic hairstyles.">Svētku, ikdienas un romantiskas frizūras.</p>
-      </div>
+    <div class="srv-row reveal reveal-delay-2">
+      <span class="srv-row-num">03</span>
+      <span class="srv-row-name" data-lv="Krāsošana" data-ru="Окрашивание" data-en="Colouring">Krāsošana</span>
+      <span class="srv-row-desc" data-lv="Airtouch, balayage, izgaismošana, sirmuma maskēšana." data-ru="Airtouch, балаяж, выход из тёмного, камуфляж седины." data-en="Airtouch, balayage, lightening, grey coverage.">Airtouch, balayage, izgaismošana, sirmuma maskēšana.</span>
     </div>
-
-    <!-- SERVICE 4 -->
-    <div class="srv-card reveal reveal-delay-3">
-      <div class="srv-img-slot">
-        <div class="srv-img-placeholder srv-img-bg-4" id="srv4wrap">
-          <div class="srv-upload-icon">📷</div>
-          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото" data-en="Upload photo">Augšupielādēt foto</div>
-          <input type="file" accept="image/*" onchange="loadSrvImage(event,'srv4wrap')">
-        </div>
-      </div>
-      <div class="srv-overlay"></div>
-      <div class="srv-arrow">↗</div>
-      <div class="srv-content">
-        <h3 data-lv="Krāsošana" data-ru="Окрашивание" data-en="Colouring">Krāsošana</h3>
-        <p data-lv="Airtouch, balayage, izgaismošana, sirmuma maskēšana." data-ru="Airtouch, балаяж, выход из тёмного, камуфляж седины." data-en="Airtouch, balayage, lightening, grey coverage.">Airtouch, balayage, izgaismošana, sirmuma maskēšana.</p>
-      </div>
+    <div class="srv-row reveal reveal-delay-3">
+      <span class="srv-row-num">04</span>
+      <span class="srv-row-name" data-lv="Veidošana un stilēšana" data-ru="Укладки и стайлинг" data-en="Blowout & Styling">Veidošana un stilēšana</span>
+      <span class="srv-row-desc" data-lv="Svētku, ikdienas un romantiskas frizūras." data-ru="Праздничные, повседневные и романтические образы." data-en="Occasion, everyday and romantic hairstyles.">Svētku, ikdienas un romantiskas frizūras.</span>
     </div>
-
-    <!-- SERVICE 5 -->
-    <div class="srv-card reveal">
-      <div class="srv-img-slot">
-        <div class="srv-img-placeholder srv-img-bg-5" id="srv5wrap">
-          <div class="srv-upload-icon">📷</div>
-          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото" data-en="Upload photo">Augšupielādēt foto</div>
-          <input type="file" accept="image/*" onchange="loadSrvImage(event,'srv5wrap')">
-        </div>
-      </div>
-      <div class="srv-overlay"></div>
-      <div class="srv-arrow">↗</div>
-      <div class="srv-content">
-        <h3 data-lv="Kopšana un atjaunošana" data-ru="Уход и восстановление" data-en="Care & Restoration">Kopšana un atjaunošana</h3>
-        <p data-lv="Dziļās maskas un barojošas procedūras garajiem matiem." data-ru="Глубокие маски и питательные процедуры для длины." data-en="Deep masks and nourishing treatments for long hair.">Dziļās maskas un barojošas procedūras garajiem matiem.</p>
-      </div>
+    <div class="srv-row reveal">
+      <span class="srv-row-num">05</span>
+      <span class="srv-row-name" data-lv="Kopšana un atjaunošana" data-ru="Уход и восстановление" data-en="Care & Restoration">Kopšana un atjaunošana</span>
+      <span class="srv-row-desc" data-lv="Dziļās maskas un barojošas procedūras garajiem matiem." data-ru="Глубокие маски и питательные процедуры для длины." data-en="Deep masks and nourishing treatments for long hair.">Dziļās maskas un barojošas procedūras garajiem matiem.</span>
     </div>
-
-    <!-- SERVICE 6 -->
-    <div class="srv-card reveal reveal-delay-1">
-      <div class="srv-img-slot">
-        <div class="srv-img-placeholder srv-img-bg-6" id="srv6wrap">
-          <div class="srv-upload-icon">📷</div>
-          <div class="srv-upload-hint" data-lv="Augšupielādēt foto" data-ru="Загрузить фото" data-en="Upload photo">Augšupielādēt foto</div>
-          <input type="file" accept="image/*" onchange="loadSrvImage(event,'srv6wrap')">
-        </div>
-      </div>
-      <div class="srv-overlay"></div>
-      <div class="srv-arrow">↗</div>
-      <div class="srv-content">
-        <h3 data-lv="Meistara konsultācija" data-ru="Консультация мастера" data-en="Stylist Consultation">Meistara konsultācija</h3>
-        <p data-lv="Matu stāvokļa analīze un individuālās programmas izvēle." data-ru="Разбор состояния волос и подбор индивидуальной программы." data-en="Hair condition analysis and a tailored treatment programme.">Matu stāvokļa analīze un individuālās programmas izvēle.</p>
-      </div>
+    <div class="srv-row reveal reveal-delay-1">
+      <span class="srv-row-num">06</span>
+      <span class="srv-row-name" data-lv="Meistara konsultācija" data-ru="Консультация мастера" data-en="Stylist Consultation">Meistara konsultācija</span>
+      <span class="srv-row-desc" data-lv="Matu stāvokļa analīze un individuālās programmas izvēle." data-ru="Разбор состояния волос и подбор индивидуальной программы." data-en="Hair condition analysis and a tailored treatment programme.">Matu stāvokļa analīze un individuālās programmas izvēle.</span>
     </div>
-
   </div>
 </section>
 
@@ -506,16 +498,10 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
       <p class="section-sub" data-lv="Reālie rezultāti no salona «Tev» klientiem." data-ru="Реальные результаты клиентов салона «Tev»." data-en="Real results from clients of salon «Tev».">Reālie rezultāti no salona «Tev» klientiem.</p>
     </div>
   </div>
-  <div class="gallery-grid">
+  <div class="gallery-grid" style="grid-template-columns:repeat(3,1fr)">
     <div class="gal-item reveal g1"><div class="gal-img-placeholder"><div class="gal-upload-icon">📷</div><div class="gal-upload-hint">foto 1</div><input type="file" accept="image/*" onchange="loadGalImage(event,this)"></div><div class="gal-overlay"></div></div>
     <div class="gal-item reveal reveal-delay-1 g2"><div class="gal-img-placeholder"><div class="gal-upload-icon">📷</div><div class="gal-upload-hint">foto 2</div><input type="file" accept="image/*" onchange="loadGalImage(event,this)"></div><div class="gal-overlay"></div></div>
     <div class="gal-item reveal reveal-delay-2 g3"><div class="gal-img-placeholder"><div class="gal-upload-icon">📷</div><div class="gal-upload-hint">foto 3</div><input type="file" accept="image/*" onchange="loadGalImage(event,this)"></div><div class="gal-overlay"></div></div>
-    <div class="gal-item reveal g4"><div class="gal-img-placeholder"><div class="gal-upload-icon">📷</div><div class="gal-upload-hint">foto 4</div><input type="file" accept="image/*" onchange="loadGalImage(event,this)"></div><div class="gal-overlay"></div></div>
-    <div class="gal-item reveal reveal-delay-1 g5"><div class="gal-img-placeholder"><div class="gal-upload-icon">📷</div><div class="gal-upload-hint">foto 5</div><input type="file" accept="image/*" onchange="loadGalImage(event,this)"></div><div class="gal-overlay"></div></div>
-    <div class="gal-item reveal reveal-delay-2 g6"><div class="gal-img-placeholder"><div class="gal-upload-icon">📷</div><div class="gal-upload-hint">foto 6</div><input type="file" accept="image/*" onchange="loadGalImage(event,this)"></div><div class="gal-overlay"></div></div>
-    <div class="gal-item reveal g7"><div class="gal-img-placeholder"><div class="gal-upload-icon">📷</div><div class="gal-upload-hint">foto 7</div><input type="file" accept="image/*" onchange="loadGalImage(event,this)"></div><div class="gal-overlay"></div></div>
-    <div class="gal-item reveal reveal-delay-1 g8"><div class="gal-img-placeholder"><div class="gal-upload-icon">📷</div><div class="gal-upload-hint">foto 8</div><input type="file" accept="image/*" onchange="loadGalImage(event,this)"></div><div class="gal-overlay"></div></div>
-    <div class="gal-item reveal reveal-delay-2 g9"><div class="gal-img-placeholder"><div class="gal-upload-icon">📷</div><div class="gal-upload-hint">foto 9</div><input type="file" accept="image/*" onchange="loadGalImage(event,this)"></div><div class="gal-overlay"></div></div>
   </div>
 </section>
 
@@ -552,75 +538,29 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 40px
 <!-- BOOKING -->
 <section class="booking" id="booking">
   <div class="section-label">Booking</div>
-  <h2 class="section-h" data-lv="Pierakstīties tiešsaistē" data-ru="Записаться онлайн" data-en="Book Online">Pierakstīties tiešsaistē</h2>
-  <p class="section-sub" data-lv="Atstājiet pieteikumu — administrators sazināsies ar jums 30 minūšu laikā." data-ru="Оставьте заявку — администратор свяжется с вами в течение 30 минут." data-en="Leave a request — our administrator will contact you within 30 minutes.">Atstājiet pieteikumu — administrators sazināsies ar jums 30 minūšu laikā.</p>
-  <div class="booking-inner">
-    <div class="booking-info reveal">
-      <ul class="contact-list">
-        <li class="contact-item">
-          <div class="contact-icon"><svg viewBox="0 0 16 16" fill="none" width="16" height="16"><path d="M2 4c0-.55.45-1 1-1h2.5l1 2.5-1.5 1c.69 1.5 2 2.81 3.5 3.5l1-1.5L12 9.5V12c0 .55-.45 1-1 1C5.48 13 2 9.52 2 4z" stroke="currentColor" stroke-width="1.2"/></svg></div>
-          <div class="contact-detail">
-            <div class="contact-label" data-lv="Vai zvaniet" data-ru="Или позвоните" data-en="Or call us">Vai zvaniet</div>
-            <div class="contact-val"><a href="tel:67261401" style="color:inherit;text-decoration:none">67261401</a></div>
-          </div>
-        </li>
-        <li class="contact-item">
-          <div class="contact-icon"><svg viewBox="0 0 16 16" fill="none" width="16" height="16"><path d="M8 1.5C5.51 1.5 3.5 3.51 3.5 6c0 3.5 4.5 8 4.5 8s4.5-4.5 4.5-8c0-2.49-2.01-4.5-4.5-4.5z" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="6" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg></div>
-          <div class="contact-detail">
-            <div class="contact-label">Rīga</div>
-            <div class="contact-val">Prūšu iela 20</div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="booking-form reveal reveal-delay-1">
-      <div id="formWrap">
-        <div class="form-row">
-          <div class="form-group">
-            <label data-lv="Jūsu vārds" data-ru="Ваше имя" data-en="Your name">Jūsu vārds</label>
-            <input type="text" id="fname" data-lv-ph="Vārds" data-ru-ph="Имя" data-en-ph="Name" placeholder="Vārds" autocomplete="name">
-          </div>
-          <div class="form-group">
-            <label data-lv="Tālrunis" data-ru="Телефон" data-en="Phone">Tālrunis</label>
-            <input type="tel" id="fphone" placeholder="+371..." autocomplete="tel">
-          </div>
+  <h2 class="section-h" data-lv="Pierakstīties" data-ru="Записаться" data-en="Book Now">Pierakstīties</h2>
+  <p class="section-sub" data-lv="Zvaniet mums — mēs ar prieku atbildēsim uz jūsu jautājumiem un pierakstīsim jūs." data-ru="Позвоните нам — мы с радостью ответим на ваши вопросы и запишем вас." data-en="Call us — we'll be happy to answer your questions and book an appointment.">Zvaniet mums — mēs ar prieku atbildēsim uz jūsu jautājumiem un pierakstīsim jūs.</p>
+  <div style="margin-top:48px;display:flex;flex-direction:column;align-items:flex-start;gap:24px">
+    <ul class="contact-list">
+      <li class="contact-item reveal">
+        <div class="contact-icon"><svg viewBox="0 0 16 16" fill="none" width="16" height="16"><path d="M2 4c0-.55.45-1 1-1h2.5l1 2.5-1.5 1c.69 1.5 2 2.81 3.5 3.5l1-1.5L12 9.5V12c0 .55-.45 1-1 1C5.48 13 2 9.52 2 4z" stroke="currentColor" stroke-width="1.2"/></svg></div>
+        <div class="contact-detail">
+          <div class="contact-label" data-lv="Zvaniet mums" data-ru="Позвоните нам" data-en="Call us">Zvaniet mums</div>
+          <div class="contact-val"><a href="tel:67261401" style="color:inherit;text-decoration:none">67261401</a></div>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label data-lv="Pakalpojums" data-ru="Услуга" data-en="Service">Pakalpojums</label>
-            <select id="fservice">
-              <option value="" data-lv="Izvēlieties pakalpojumu" data-ru="Выберите услугу" data-en="Choose a service">Izvēlieties pakalpojumu</option>
-              <option data-lv="Sieviešu frizūra" data-ru="Женская стрижка" data-en="Women's Haircut">Sieviešu frizūra</option>
-              <option data-lv="Vīriešu frizūra" data-ru="Мужская стрижка" data-en="Men's Haircut">Vīriešu frizūra</option>
-              <option>Airtouch</option>
-              <option>Balayage</option>
-              <option data-lv="Izgaismošana" data-ru="Выход из тёмного" data-en="Lightening">Izgaismošana</option>
-              <option data-lv="Sirmuma maskēšana" data-ru="Камуфляж седины" data-en="Grey Coverage">Sirmuma maskēšana</option>
-              <option data-lv="Veidošana un stilēšana" data-ru="Укладка и стайлинг" data-en="Blowout & Styling">Veidošana un stilēšana</option>
-              <option data-lv="Kopšana un atjaunošana" data-ru="Уход и восстановление" data-en="Care & Restoration">Kopšana un atjaunošana</option>
-              <option data-lv="Meistara konsultācija" data-ru="Консультация мастера" data-en="Stylist Consultation">Meistara konsultācija</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label data-lv="Vēlamais datums" data-ru="Желаемая дата" data-en="Preferred date">Vēlamais datums</label>
-            <input type="date" id="fdate">
-          </div>
+      </li>
+      <li class="contact-item reveal reveal-delay-1">
+        <div class="contact-icon"><svg viewBox="0 0 16 16" fill="none" width="16" height="16"><path d="M8 1.5C5.51 1.5 3.5 3.51 3.5 6c0 3.5 4.5 8 4.5 8s4.5-4.5 4.5-8c0-2.49-2.01-4.5-4.5-4.5z" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="6" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg></div>
+        <div class="contact-detail">
+          <div class="contact-label">Rīga</div>
+          <div class="contact-val">Prūšu iela 20</div>
         </div>
-        <div class="form-group full">
-          <label data-lv="Komentārs (neobligāti)" data-ru="Комментарий (необязательно)" data-en="Comment (optional)">Komentārs (neobligāti)</label>
-          <textarea id="fcomment" data-lv-ph="Vēlmes, jautājumi..." data-ru-ph="Пожелания, вопросы..." data-en-ph="Wishes, questions..." placeholder="Vēlmes, jautājumi..."></textarea>
-        </div>
-        <button class="btn-submit" id="submitBtn" onclick="submitForm()">
-          <span data-lv="Nosūtīt pieteikumu" data-ru="Отправить заявку" data-en="Send Request">Nosūtīt pieteikumu</span>
-          <svg viewBox="0 0 16 16" fill="none" width="16" height="16"><path d="M2 8h12M10 4l4 4-4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-      </div>
-      <div class="success-msg" id="successMsg">
-        <div class="success-icon">✓</div>
-        <h3 data-lv="Pieteikums nosūtīts!" data-ru="Заявка отправлена!" data-en="Request Sent!">Pieteikums nosūtīts!</h3>
-        <p data-lv="Mēs sazināsimies ar jums 30 minūšu laikā." data-ru="Мы свяжемся с вами в течение 30 минут." data-en="We will contact you within 30 minutes.">Mēs sazināsimies ar jums 30 minūšu laikā.</p>
-      </div>
-    </div>
+      </li>
+    </ul>
+    <a href="tel:67261401" class="btn-primary reveal reveal-delay-2">
+      <svg viewBox="0 0 16 16" fill="none" width="16" height="16"><path d="M2 4c0-.55.45-1 1-1h2.5l1 2.5-1.5 1c.69 1.5 2 2.81 3.5 3.5l1-1.5L12 9.5V12c0 .55-.45 1-1 1C5.48 13 2 9.52 2 4z" stroke="white" stroke-width="1.3"/></svg>
+      <span data-lv="Zvanīt: 67261401" data-ru="Позвонить: 67261401" data-en="Call: 67261401">Zvanīt: 67261401</span>
+    </a>
   </div>
 </section>
 
